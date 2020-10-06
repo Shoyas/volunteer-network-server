@@ -51,7 +51,7 @@ client.connect(err => {
 
   app.post('/addEvent', (req, res) => {
     const event = req.body;
-    events.insertMany(event)
+    events.insertOne(event)
     .then(result => {
       res.send(result.insertedCount)
       

@@ -10,9 +10,9 @@ app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-// const DbUserName: volunteerAdmin ;
-// const DbUserPass: volunteerAdmin01@ ;
-// const DbName: volunteerNetwork ;
+// DB_USERNAME = volunteerAdmin ;
+// DB_USERPASS = volunteerAdmin01@ ;
+// DB_NAME = volunteerNetwork ;
 
 
 const MongoClient = require('mongodb').MongoClient;
@@ -83,4 +83,4 @@ app.get('/', (req, res) => {
   res.send('Hello World!')
 })
 
-app.listen(port);
+app.listen(process.env.PORT || port);
